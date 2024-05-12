@@ -1,0 +1,50 @@
+/* Стили для корневого элемента и фона */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('background.jpg'); /* Путь к вашему изображению фона */
+  background-size: cover;
+}
+
+/* Стили для контейнера */
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* Прозрачный белый фон контейнера */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Стили для полей ввода */
+.input-container {
+  margin-bottom: 20px;
+}
+
+.input-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Стили для кнопки */
+.button-container button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,103 @@
+/* HomePage.module.css */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.formContainer {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input,
+.select,
+.button,
+.activeButton,
+.submitButton {
+  margin: 8px 0; /* Унифицированный вертикальный отступ для всех элементов */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input,
+.select {
+  width: 100%; /* Поля ввода и селекты занимают всю ширину контейнера */
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 8px 0; /* Унифицированный вертикальный отступ для группы кнопок */
+}
+
+.button,
+.activeButton {
+  cursor: pointer;
+  background-color: white;
+  flex-grow: 1;
+  margin: 0 5px; /* Отступы между кнопками */
+}
+
+.button:first-child,
+.activeButton:first-child {
+  margin-left: 0;
+}
+
+.button:last-child,
+.activeButton:last-child {
+  margin-right: 0;
+}
+
+.activeButton {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.submitButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Кнопка отправки занимает всю ширину контейнера */
+  margin-top: 8px; /* Сохраняем одинаковый отступ и над кнопкой */
+}
+
+/* Adjust the size of the input fields for area and floor */
+.inputSmall {
+  width: calc(50% - 10px); /* Половина ширину контейнера минус половина отступа */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .inputSmall {
+    width: 100%; /* На маленьких экранах поля занимают всю ширину */
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .button,
+  .activeButton {
+    width: 100%; /* На маленьких экранах кнопки занимают всю ширину */
+    margin: 0 0 8px 0; /* Унифицированный отступ для мобильных устройств */
+  }
+}
